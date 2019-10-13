@@ -1,15 +1,21 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { MatCheckboxModule, MatButtonModule } from '@angular/material';
+import { AppRoutingModule } from './app-routing.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,BrowserModule,MatCheckboxModule,MatButtonModule,AppRoutingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,HomeComponent,AboutComponent,NotFoundComponent
       ],
     }).compileComponents();
   }));
